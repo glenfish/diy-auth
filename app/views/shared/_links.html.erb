@@ -1,0 +1,8 @@
+<% if current_user %>
+    Logged in as <%= current_user.email %><br>
+    <%= link_to 'Sign Out', signout_path, method: 'delete'%><br><br>
+    <%= link_to 'Restricted Content', restricted_path %>
+<% else %>
+    <%= link_to 'Sign In', signin_path %><br>
+    <%= link_to 'Sign Up', signup_path %>
+<% end %>

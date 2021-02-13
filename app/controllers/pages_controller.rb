@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+before_action :authenticate, only: [:restricted]
+
   def home
     cookies[:fave_drink] = "beer" 
     cookies[:fave_color] = "blue"
@@ -14,6 +16,7 @@ class PagesController < ApplicationController
   end
 
   def restricted
+    
 
   end
 end
