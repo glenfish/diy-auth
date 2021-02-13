@@ -1,2 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% if notice %>
+    <%=notice%><br><br>
+<% end %>
+<h1>Welcome</h1>
+<p>Welcome to my site</p>
+<p>You have visited <%=@count%> times.<br>
+<% if @fave_foods %>
+Your favorite foods are: <%= @fave_foods[0] %>, <%= @fave_foods[1] %> and <%= @fave_foods[2] %><br>
+<% end %>
+Your favorite drink is: <%= @fave_drink %><br>
+Your favorite color is: <%= @fave_color %><br>
+</p>

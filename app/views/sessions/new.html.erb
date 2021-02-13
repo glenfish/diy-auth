@@ -1,0 +1,18 @@
+<% if alert %>
+    <%=alert%><br><br>
+<% end %>
+
+<%= form_with url: create_session_path, local: true do |form| %>
+    <div class="form-field">
+        <%= label_tag :email %>
+        <%= text_field_tag :email %>
+    </div>
+    <div class="form-field">
+        <%= label_tag :password %>
+        <%= text_field_tag :password %>
+    </div>
+    <div>
+        <%= submit_tag "Sign In" %>
+    </div>
+<% end %>
+
